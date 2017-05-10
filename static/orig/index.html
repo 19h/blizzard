@@ -50,6 +50,33 @@
     <link rel="apple-touch-startup-image" media="(device-width: 2048px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="startup/startup2048.jpg">
     <script src="https://use.typekit.net/khk5okl.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script type='text/javascript'>
+//some default pre init
+var Countly = Countly || {};
+Countly.q = Countly.q || [];
+
+//provide countly initialization parameters
+Countly.app_key = 'ae4a8349b2e95aeedbafb1f6c154a3b1b0d89a7e';
+Countly.url = 'https://metrics.psychonautwiki.org/';
+
+Countly.q.push(['track_sessions']);
+Countly.q.push(['track_pageview']);
+Countly.q.push(['track_clicks']);
+Countly.q.push(['track_errors']);
+Countly.q.push(['track_links']);
+Countly.q.push(['track_forms']);
+Countly.q.push(['collect_from_forms']);
+
+//load countly script asynchronously
+(function() {
+   var cly = document.createElement('script'); cly.type = 'text/javascript';
+   cly.async = true;
+   //enter url of script here
+   cly.src = 'https://metrics.psychonautwiki.org/sdk/web/countly.min.js';
+   cly.onload = function(){Countly.init()};
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+})();
+</script>
     <style type="text/css">
 .grid__container,.grid__row {
     *zoom: 1;
