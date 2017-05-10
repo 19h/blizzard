@@ -10,7 +10,7 @@ use std::fs::File;
 use std::path::{Path, PathBuf};
 
 fn get_file_stream(file: PathBuf) -> io::Result<Stream<File>> {
-    File::open(Path::new("static/").join(file)).map(|file| Stream::from(file))
+    File::open(Path::new("/www/").join(file)).map(|file| Stream::from(file))
 }
 
 #[get("/")]

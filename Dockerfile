@@ -1,7 +1,8 @@
 FROM kenansulayman/rust-nightly:latest
 
-ADD . /my-source
+ADD server /server
+ADD static /www
 
-RUN cd /my-source && cargo build -v --release
+RUN cd /server && cargo build -v --release
 
-CMD ["/my-source/target/release/blizzard"]
+CMD ["/server/target/release/blizzard"]
