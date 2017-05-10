@@ -1,0 +1,8 @@
+sehnsucht:
+  build: ./
+  container_name: blizzard
+  environment:
+    - ROCKET_ADDRESS=127.0.0.1
+    - ROCKET_PORT=4000
+  ports:
+    - "127.0.0.1:4000:80"

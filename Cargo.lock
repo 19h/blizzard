@@ -1,5 +1,5 @@
 [root]
-name = "rocket-test"
+name = "blizzard"
 version = "0.1.0"
 dependencies = [
  "rocket 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
