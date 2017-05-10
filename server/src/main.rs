@@ -8,19 +8,16 @@ use rocket::response::{Stream};
 use std::io::{self};
 use std::fs::File;
 use std::path::{Path, PathBuf};
-
-fn get_file_stream(file: PathBuf) -> io::Result<Stream<File>> {
-    File::open(Path::new("/www/").join(file)).map(|file| Stream::from(file))
-}
+use rocket::response::NamedFile;
 
 #[get("/")]
-fn root() -> io::Result<Stream<File>> {
-    get_file_stream(PathBuf::from("index.html"))
+fn root() -> io::Result<NamedFile> {
+    NamedFile::open("/www/index.html")
 }
 
 #[get("/<file..>")]
-fn files(file: PathBuf) -> io::Result<Stream<File>> {
-    get_file_stream(file)
+fn files(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("/www/").join(file)).ok()
 }
 
 fn main() {
