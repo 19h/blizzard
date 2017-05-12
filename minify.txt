@@ -14,3 +14,19 @@ html-minifier \
     --process-conditional-comments \
     --minify-css true \
     orig/index.html > index.html
+html-minifier \
+    --remove-attribute-quotes \
+    --remove-comments \
+    --remove-empty-attributes \
+    --remove-optional-tags \
+    --remove-redundant-attributes \
+    --remove-script-type-attributes \
+    --remove-style-link-type-attributes \
+    --use-short-doctype \
+    --collapse-boolean-attributes \
+    --collapse-inline-tag-whitespace \
+    --collapse-whitespace \
+    --prevent-attributes-escaping \
+    --process-conditional-comments \
+    --minify-css true \
+    orig/manifest.html > manifest.html
