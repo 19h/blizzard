@@ -13,6 +13,7 @@ html-minifier \
     --prevent-attributes-escaping \
     --process-conditional-comments \
     --minify-css true \
+    --minify-js true \
     orig/index.html > index.html
 html-minifier \
     --remove-attribute-quotes \
@@ -29,4 +30,5 @@ html-minifier \
     --prevent-attributes-escaping \
     --process-conditional-comments \
     --minify-css true \
+    --minify-js true \
     orig/manifest.html > manifest.html
