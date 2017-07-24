@@ -5,5 +5,5 @@ name = "blizzard"
 version = "0.1.0"
 
 [dependencies]
-rocket = "0.2.6"
-rocket_codegen = "0.2.6"
+rocket = "0.3.0"
+rocket_codegen = "0.3.0"
