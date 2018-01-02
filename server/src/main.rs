@@ -12,12 +12,12 @@ use rocket::response::NamedFile;
 
 #[get("/")]
 fn root() -> io::Result<NamedFile> {
-    NamedFile::open("/www/index.html")
+    NamedFile::open("../static/index.html")
 }
 
 #[get("/<file..>")]
 fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("/www/").join(file)).ok()
+    NamedFile::open(Path::new("../static/").join(file)).ok()
 }
 
 fn main() {
