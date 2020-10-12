@@ -1,3 +1,5 @@
+#!env bash
+
 html-minifier \
     --remove-attribute-quotes \
     --remove-comments \
@@ -14,7 +16,7 @@ html-minifier \
     --process-conditional-comments \
     --minify-css true \
     --minify-js true \
-    orig/index.html > index.html
+    public/orig/index.html > public/index.html
 html-minifier \
     --remove-attribute-quotes \
     --remove-comments \
@@ -31,4 +33,4 @@ html-minifier \
     --process-conditional-comments \
     --minify-css true \
     --minify-js true \
-    orig/manifest.html > manifest.html
+    public/orig/manifest.html > public/manifest.html
